@@ -1,0 +1,39 @@
+you are going to read some text files and classify them according to their labels. 
+The Reuters corpus is one of the most famous datasets for text categorization tasks. 
+We provide a subset of this dataset on Brightspace. You apply these files to make your classifier. 
+There is more information about this dataset available on http://disi.unitn.it/moschitti/corpora.htm.
+1- Download zip file and extract it. Consider this data is a subset of full Reuters corpus to make 
+it possible for you to process without the need of a powerful server.
+
+2- Each file contains some XML files. Explore XML files and find a list of all fields available there.
+
+3- Write a function extract a Pandas's Dataframe containing: 
+(1) headline, 
+(2) text, 
+(3) bip:topics,
+(4)dc.date.published, 
+(5) itemid, 
+(6) XMLfilename
+
+4- Write a python function to find all the possible values for bip:topics. Consider that each news can
+belong to more than one topic.
+
+5- Write a function to prepare your text data by methods such as removing stop words. You are allowed
+to use the NLTK library.
+
+6- Extract features from the text using any approach you like. Write a function that input the Dataframe
+in step 3 and generates a new Dataframe of your features and labels.
+
+7- Divide your data into a training and test set. You can use any method such as cross-validation. You
+need to provide a reason why you decide so here.
+
+8- Write a function to get the Dataframe of step 6 and a set of parameters to return a trained classifier
+to classify all labels that you get in step 4.
+
+9- Write a function to evaluate the quality of your classifier (like accuracy, F-score, AUC, ...). Explain why
+you think this function is the best choice
+
+9- Generate five different classifiers (Random Forest, Decision Tree, Linear Regression, Neural Network, and SVM) 
+using step 8. 
+
+Tune them up for the best parameters. Find the best classifier. Explain why.
